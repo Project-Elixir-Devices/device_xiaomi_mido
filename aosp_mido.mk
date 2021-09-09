@@ -21,12 +21,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from mido device
 $(call inherit-product, device/xiaomi/mido/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Elixir stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+# Bootanimation Resolution
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Some Extra's
+WITH_GMS := true
+IS_PHONE := true
+CUSTOM_BUILD_TYPE=OFFICIAL
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
-PRODUCT_NAME := lineage_mido
+PRODUCT_NAME := aosp_mido
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 4
 PRODUCT_MANUFACTURER := Xiaomi

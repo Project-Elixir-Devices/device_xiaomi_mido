@@ -4,3 +4,7 @@
 
 # Default to BFQ I/O scheduler
 persist.sys.io.scheduler=bfq
+
+# Elixir Stuff
+ro.elixir.maintainer=Smokey
+ro.elixir.version=1.0
